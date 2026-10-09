@@ -1,7 +1,13 @@
-package gogb
+package main
 
-import "fmt"
+import (
+	"zandergray.dev/gogb/internal"
+)
 
 func main() {
-	fmt.Println("Welcome to GoGB")
+	var tetrisPath string = "/home/alexander/Downloads/tetris.gb"
+
+	if internal.CartLoad(tetrisPath) {
+		internal.CartPrintInfo()
+	}
 }
